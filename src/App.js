@@ -29,7 +29,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Conversor de unidades full-stack</h1>
+      <h1>TP 7 IyCS - UTN FRM</h1>
+      <h2>Conversor de unidades full-stack</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Selecione una conversión:
