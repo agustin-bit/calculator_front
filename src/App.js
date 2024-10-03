@@ -16,12 +16,11 @@ function App() {
         `https://calculator-api-ygtg.onrender.com/${selectedOption}/${numberInput}`,
         {
           method: "GET",
-        }
+        },
       );
 
       const data = await res.json();
       setResponse(data.result);
-
     } catch (error) {
       setResponse("ERROR");
     }
@@ -29,7 +28,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Conversor de unidades full-stack</h1>
+      <h1>TP 7 IyCS - UTN FRM</h1>
+      <h2>Conversor de unidades full-stack</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Selecione una conversión:
@@ -37,24 +37,16 @@ function App() {
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
           >
-            <option value="inch_to_cm">
-              Pulgadas a centímetros
-            </option>
-            <option value="cm_to_inch">
-              Centímetros a pulgadas
-            </option>
+            <option value="inch_to_cm">Pulgadas a centímetros</option>
+            <option value="cm_to_inch">Centímetros a pulgadas</option>
             <option value="fahrenheit_to_celsius">
               Fahrenheit a centígrados
             </option>
             <option value="celsius_to_fahrenheit">
               Centígrados a fahrenheit
             </option>
-            <option value="pounds_to_kgs">
-              Libras a kilos
-            </option>
-            <option value="kgs_to_pounds">
-              Kilos a libras
-            </option>
+            <option value="pounds_to_kgs">Libras a kilos</option>
+            <option value="kgs_to_pounds">Kilos a libras</option>
           </select>
         </label>
         <br />
@@ -71,7 +63,6 @@ function App() {
       </form>
 
       <h2>Resultado: {response}</h2>
-
     </div>
   );
 }
