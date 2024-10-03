@@ -10,6 +10,8 @@ function App() {
     e.preventDefault();
 
     try {
+      setResponse("Calculando...");
+
       const res = await fetch(
         `https://calculator-api-ygtg.onrender.com/${selectedOption}/${numberInput}`,
         {
@@ -18,10 +20,10 @@ function App() {
       );
 
       const data = await res.json();
-      setResponse(data.result || "Success!");
+      setResponse(data.result);
 
     } catch (error) {
-      setResponse("An error occurred.");
+      setResponse("ERROR");
     }
   };
 
