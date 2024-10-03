@@ -32,7 +32,7 @@ function App() {
       <h1>Conversor de unidades full-stack</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Select an option:
+          Selecione una conversión:
           <select
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
