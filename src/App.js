@@ -11,7 +11,7 @@ function App() {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/${selectedOption}/${numberInput}`,
+        `https://calculator-api-ygtg.onrender.com/${selectedOption}/${numberInput}`,
         {
           method: "GET",
         }
@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>Conversor de unidades full-stack</h1>
       <form onSubmit={handleSubmit}>
         <label>
